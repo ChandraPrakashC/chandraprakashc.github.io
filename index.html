@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="profile-container">
+            <img src="Prakash.jpg" alt="My Photo" class="profile-pic">
+            <h1>CHANDRA PRAKASH C</h1>
+            <p>B.Tech - Artificial Intelligence & Data Science</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+    <div class="container">
+        <a href="#" class="navbar-brand">Portfolio</a>
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="#about" class="navbar-link">About Me</a></li>
+            <li class="navbar-item"><a href="#study" class="navbar-link">Education</a></li>
+            <li class="navbar-item"><a href="#projects" class="navbar-link">Projects</a></li>
+            <li class="navbar-item"><a href="#certifications" class="navbar-link">Certifications</a></li>
+            <li class="navbar-item"><a href="#contact" class="navbar-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+           I am a passionate and driven final-year B.Tech student specializing in Artificial Intelligence and Data Science at Mepco Schlenk Engineering College. With a solid foundation in machine learning, data analytics, and full-stack development, I enjoy building smart and scalable solutions to real-world problems. I have hands-on experience in AI projects involving computer vision, reinforcement learning, and system simulations. As a quick learner and problem-solver, I thrive in collaborative environments and am actively seeking opportunities to apply my skills in industry-oriented projects. My goal is to innovate and contribute meaningfully in the ever-evolving tech landscape.
+        </p>
+    </section>
+
+    <section id="study">
+        <h2>Education</h2>
+        <div class="education-grid"><div class="education-item">
+    <h3 style="color: #6e44ff;">10th - SBK Higher Secondary School</h3>
+    <p>Location: Aruppukottai</p>
+    <p>Department: S.S.L.C</p>
+    <p>Passed out year: 2019</p>
+    <span class="button-effect"><h3>56%</h3></span>
+</div>
+<div class="education-item">
+    <h3 style="color: #6e44ff;">Diploma - Vellaichamy Nadar Polytechnic College</h3>
+    <p>Location: Virudhunagar</p>
+    <p>Department:Mechanical Engineering</p>
+    <p>Passed out year: 2022</p>
+    <span class="button-effect"><h3>83.64%</h3></span>
+</div>
+<div class="education-item">
+    <h3 style="color: #6e44ff;">B.Tech - Mepco Schlenk Engineering College</h3>
+    <p>Location: Sivakasi, Virudhunagar</p>
+    <p>Department: Artificial Intelligence and Data Science</p>
+    <p>Passed out year: 2025</p>
+    <span class="button-effect"><h3>6.3 CGPA</h3></span>
+</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <div class="project-description">
+                <h2>1. Sentiment analysis using NLP</h2>
+                <h4>07/22 - 12/22</h4>
+                <p>
+                    Our project focused on building a sentiment classification model to analyze customer opinions from airline-related tweets. The dataset contained real-time tweets labeled as positive, negative, or neutral. The key steps included data preprocessing using NLTK for noise removal, lemmatization, and stopword filtering. A Bag-of-Words (BoW) model with tri-gram tokenization was applied using CountVectorizer to convert textual data into numerical features. A Logistic Regression classifier was trained to predict sentiment from tweets. The model achieved an overall accuracy of 74%. Performance was evaluated using confusion matrix and classification metrics, highlighting strong performance on negative sentiment but lower recall for neutral and positive classes, indicating potential data imbalance or class separation challenges.
+                </p>
+                <a href="https://github.com/ChandraPrakashC/Sentiment-Analysis" target="_blank" class="github-link" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#24292e;color:#fff;border-radius:4px;text-decoration:none;">
+            View on GitHub
+                </a>
+            </div>
+            <div class="project-image">
+                <img src="Sentiment Analysis.jpg" alt="Sentiment Analysis Project Image">
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-description">
+                <h2>2.File Sharing using TCP/IP</h2>
+                <h4>03/23- 6/23</h4>
+                <p>
+                    The File Sharing Project is a client-server application in C that enables file upload and download using TCP/IP socket programming. The server supports two modes: sending files to the client or receiving uploaded files from the client, with authentication using hardcoded credentials. It lists available files from the ./files/ directory for download, while the client lists files from ./files_client/ for upload. Users can select files to transfer, and animated progress bars simulate real-time feedback during the process. The client handles login, connects to the server, and performs file operations based on user choice. This project showcases core concepts like sockets, file I/O, and basic user interaction.</p>
+                <a href="https://github.com/ChandraPrakashC/File-sharing" target="_blank" class="github-link" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#24292e;color:#fff;border-radius:4px;text-decoration:none;">
+            View on GitHub
+                </a>
+                </div>
+            <div class="project-image">
+                <img src="File Sharing.jpg" alt="File Sharing using TCP/IP Project Image">
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-description">
+                <h2>3. Crack Detection using Machine Learning</h2>
+                <h4>08/23 - 11/23</h4>
+                <p>
+                    The Crack Detection using Machine Learning project is an image classification system designed to identify cracks in concrete structures using a convolutional neural network (CNN). A labeled dataset of crack (Positive) and no-crack (Negative) images is prepared, loaded, and split into training, validation, and test sets. The model is trained using TensorFlow’s CNN layers with accuracy reaching over 96% and a strong R² score of 0.85, demonstrating reliable performance. Evaluation includes confusion matrix, precision, recall, and F1-score metrics for both classes. The trained model is further deployed using Gradio, allowing users to upload images via a web interface and receive predictions with confidence scores. The project also supports bulk testing on new image folders, saving results to CSV for further analysis. This end-to-end pipeline showcases effective integration of deep learning, image preprocessing, evaluation, and real-time deployment.
+                </p>
+                <a href="https://github.com/ChandraPrakashC/Crack-Detection" target="_blank" class="github-link" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#24292e;color:#fff;border-radius:4px;text-decoration:none;">
+            View on GitHub
+                </a>
+            </div>
+            <div class="project-image">
+                <img src="Crack Detection.png" alt="Shortest Path Project Image">
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-description">
+                <h2>4. Image to Cartoon Converter using Python, OpenCV, and GAN</h2>
+                <h4>01/24 - 03/24</h4>
+                <p>
+                    Developed an image-to-cartoon converter in Python utilizing OpenCV for image processing and Generative Adversarial Networks (GANs) for style transformation. Implemented a pre-trained GAN model to transform real images into cartoon-style images. Employed OpenCV for preprocessing tasks such as resizing, noise reduction, and edge detection. Integrated GAN to perform style transfer, creating cartoon-like effects. Created a user-friendly interface for uploading and converting images. Conducted extensive testing to ensure high-quality output. This project enhanced my skills in computer vision, deep learning, and Python programming.</h4>
+                </p>
+                <a href="hhttps://github.com/ChandraPrakashC/Cartoon-Gan-Master" target="_blank" class="github-link" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#24292e;color:#fff;border-radius:4px;text-decoration:none;">
+            View on GitHub
+                </a>
+                </div>
+            <div class="project-image">
+                <img src="Image to Cartoon Converter.jpg" alt="Image to Cartoon Converter Image">
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-description">
+                <h2>5. Online Battleship Game using Node.js</h2>
+                <h4>02/24 - 04/24</h4>
+                <p>
+                    Developed an online Battleship game using Node.js, featuring a client-server architecture for real-time multiplayer gameplay. Implemented the server-side logic to manage game states, player connections, and turn-based interactions. Utilized WebSocket for real-time communication between clients and the server, ensuring a smooth and interactive experience. Designed a responsive client interface with HTML, CSS, and JavaScript for intuitive gameplay. Integrated features such as game setup, attack validation, and win/loss determination. Ensured secure and efficient handling of player data and game sessions. This project enhanced my skills in Node.js, WebSocket programming, and real-time web application development.</h4>
+                </p>
+                <a href="https://github.com/ChandraPrakashC/Battleship-node-master" target="_blank" class="github-link" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#24292e;color:#fff;border-radius:4px;text-decoration:none;">
+            View on GitHub
+                </a>
+            </div>
+            <div class="project-image">
+                <img src="Battleship game.jpg" alt="Battleship Game Image">
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-description">
+                <h2>6. Smart Parking System</h2>
+                <h4>07/24 - 08/24</h4>
+                <p>
+                    This system uses four IR sensors (ir_car1 to ir_car4) to monitor parking slots. If a slot is occupied, it shows “F” (Full), else “E” (Empty) on the LCD. An entry sensor (ir_enter) and exit sensor (ir_back) detect vehicles entering or exiting. When a car arrives and a slot is available, the servo motor lifts the gate (myservo.write(180)), the system updates the available slots, and the gate closes after entry. A red LED indicates "Parking Full". The system continuously updates slot status and displays messages on the LCD to guide drivers.
+                </p>
+                <a href="https://github.com/ChandraPrakashC/Smart-Parking-Slot-System" target="_blank" class="github-link" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#24292e;color:#fff;border-radius:4px;text-decoration:none;">
+            View on GitHub
+                </a>
+            </div>
+            <div class="project-image">
+                <img src="IoT-Based-Smart-Parking-System.jpg" alt="IoT Based Smart Parking System Image">
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-description">
+                <h2>7. Course Recommendations System</h2>
+                <h4>07/24 - 08/24</h4>
+                <p>
+                    Our project aimed to build a scalable course recommendation system using PySpark's ALS (Alternating Least Squares) algorithm. The system analyzes Udemy course data and recommends personalized courses based on user interactions, such as the number of reviews and subscribers. To facilitate interactivity and visualization, a web-based dashboard was built using Streamlit, offering insights into course trends and individual recommendations.                
+                </p>
+                <a href="https://github.com/ChandraPrakashC/Course-Recommendation-System" target="_blank" class="github-link" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#24292e;color:#fff;border-radius:4px;text-decoration:none;">
+            View on GitHub
+                </a>
+            </div>
+            <div class="project-image">
+                <img src="Course Recommendation System.jpeg" alt="Course Recommendation System Image">
+            </div>
+        </div>
+
+        <!-- Add more projects similarly -->
+    <section id="certifications">
+    <h2>Certificates</h2>
+
+    <div class="certification-row">
+        <div class="certification">
+            <img src="Conference.png" alt="Conference" onclick="openModal(this)" data-full="Conference.png">
+            <h3>Conference</h3>
+            <p>Jan - March 2025<br>ICESM 2025</p>
+        </div>
+        <div class="certification">
+            <img src="Smart India Hackathon 2024 Finalist.jpg" alt="Smart India Hackathon 2024 Finalist" onclick="openModal(this)" data-full="Smart India Hackathon 2024 Finalist.jpg">
+            <h3>Smart India Hackathon 2024 Finalist</h3>
+            <p>Oct 2024<br>Ministry of Culture</p>
+        </div>
+        <div class="certification">
+            <img src="Smart India Hackathon 2024.jpg" alt="Smart India Hackathon 2024" onclick="openModal(this)" data-full="Smart India Hackathon 2024.jpg">
+            <h3>Smart India Hackathon 2024</h3>
+            <p>Sep 2024<br>Internal College (Mepco Schlenk Engineering College)</p>
+        </div>
+        <div class="certification">
+            <img src="Symposium(WHIMZIAL 2K24).jpg" alt="Paper Presentation" onclick="openModal(this)" data-full="Symposium(WHIMZIAL 2K24).jpg">
+            <h3>Paper Presentation</h3>
+            <p>Jan 2024<br>SIMTAS Engineering</p>
+        </div>
+        <div class="certification">
+            <img src="Symposium (WHIMZIAL2K24).jpg" alt="Mobile Gaming & Treasure Hunt" onclick="openModal(this)" data-full="Symposium (WHIMZIAL2K24).jpg">
+            <h3>Mobile Gaming & Treasure Hunt</h3>
+            <p>Jan 2024<br>SIMTAS Engineering</p>
+        </div>
+        <div class="certification">
+            <img src="Symposium (WHIMZIAL 2K24).jpg" alt="Tech Quiz" onclick="openModal(this)" data-full="Symposium (WHIMZIAL 2K24).jpg">
+            <h3>Tech Quiz</h3>
+            <p>Jan 2024<br>SIMTAS Engineering</p>
+        </div>
+    </div>
+
+    <div class="certification-row">
+        <div class="certification">
+            <img src="Smart India Hackathon 2023.jpg" alt="Smart India Hackathon 2023" onclick="openModal(this)" data-full="Smart India Hackathon 2023.jpg">
+            <h3>Smart India Hackathon 2023</h3>
+            <p>Sep 2023<br>Internal college (Mepco Schlenk Engineering College)</p>
+        </div>
+        <div class="certification">
+            <img src="Block Chain Technology and its Tools.jpg" alt="Block Chain Technology and its Tools" onclick="openModal(this)" data-full="Block Chain Technology and its Tools.jpg">
+            <h3>Block Chain Technology and its Tools</h3>
+            <p>Jan 2023<br>GUVI</p>
+        </div>
+        <div class="certification">
+            <img src="PC and Networking Hardware.jpg" alt="PC and Networking Hardware" onclick="openModal(this)" data-full="PC and Networking Hardware.jpg">
+            <h3>PC and Networking Hardware</h3>
+            <p>Feb 2023<br>GUVI</p>
+        </div>
+    </div>
+
+    <div class="certification-row">
+        <div class="certification">
+            <img src="Gyan Mitra.jpg" alt="Gyan Mitra" onclick="openModal(this)" data-full="Gyan Mitra.jpg">
+            <h3>Gyan Mitra</h3>
+            <p>Feb 2023</p>
+        </div>
+        <div class="certification">
+            <img src="CSIR NEERI - Race Facility.jpg" alt="Poster Presentation" onclick="openModal(this)" data-full="CSIR NEERI - Race Facility.jpg">
+            <h3>Poster Presentation</h3>
+            <p>Sep 2023<br>CSIR NEERI - Race Facility</p>
+        </div>
+    </div>
+<!-- Modal Viewer -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-container">
+        <div class="contact-details">
+            <h3>Phone: +91 9600952527</h3>
+            <h3>WhatsApp: +91 9600952527</h3>
+            <h3>Email: cchandraprakashmech@gmail.com</h3>
+            <h3>Address: 3-8-35, Gurunathan Kovil Street Palayampatti,Aruppukottai. 626112</h3>
+            <h3>LinkedIn: <a href="https://www.linkedin.com/in/chandraprakashc51/">Chandra Prakash C</a></h3>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1912.9683145630788!2d78.09862823834953!3d9.540530648587529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMzInMjYuMSJOIDc4wrAwNSc1Ni44IkU!5e0!3m2!1sen!2sin!4v1751443186467!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+    </section>
+
+<footer>
+    <p>&copy; 2024 Chandra Prakash C. All rights reserved.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+
+</body>
+</html>
