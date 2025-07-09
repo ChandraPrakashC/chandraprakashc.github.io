@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" id="theme-style">
 </head>
 <body>
-    <header>
-        <div class="profile-container">
-            <img src="Prakash.jpg" alt="My Photo" class="profile-pic">
-            <h1>CHANDRA PRAKASH C</h1>
-            <p>B.Tech - Artificial Intelligence & Data Science</p>
-        </div>
-    </header>
 
-    <nav class="navbar">
-    <div class="container">
-        <a href="#" class="navbar-brand">Portfolio</a>
-        <ul class="navbar-menu">
-            <li class="navbar-item"><a href="#about" class="navbar-link">About Me</a></li>
-            <li class="navbar-item"><a href="#study" class="navbar-link">Education</a></li>
-            <li class="navbar-item"><a href="#projects" class="navbar-link">Projects</a></li>
-            <li class="navbar-item"><a href="#certifications" class="navbar-link">Certifications</a></li>
-            <li class="navbar-item"><a href="#contact" class="navbar-link">Contact</a></li>
-        </ul>
-    </div>
+<header>
+    <label class="theme-switch">
+  <input type="checkbox" id="checkbox" />
+  <span class="slider" id="slider">
+    <span class="emoji" id="emoji-toggle">🌙</span>
+  </span>
+</label>
+
+
+  <div class="profile-container">
+    <img src="Prakash.jpg" alt="My Photo" class="profile-pic">
+    <h1>CHANDRA PRAKASH C</h1>
+    <p>B.Tech - Artificial Intelligence & Data Science</p>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="#" class="navbar-brand">Portfolio</a>
+    <ul class="navbar-menu">
+      <li class="navbar-item"><a href="#about" class="navbar-link">About Me</a></li>
+      <li class="navbar-item"><a href="#study" class="navbar-link">Education</a></li>
+      <li class="navbar-item"><a href="#projects" class="navbar-link">Projects</a></li>
+      <li class="navbar-item"><a href="#certifications" class="navbar-link">Certifications</a></li>
+      <li class="navbar-item"><a href="#resume" class="navbar-link">Resume</a></li>
+      <li class="navbar-item"><a href="#contact" class="navbar-link">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
     <section id="about">
@@ -247,6 +257,31 @@
 </div>
 </section>
 
+<section id="resume">
+  <h2>Resume</h2>
+
+  <div class="resume-container" style="text-align: center;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+      <div></div> <!-- Empty div for left alignment -->
+      <div style="font-size: 1.1rem; font-weight: bold; color: var(--accent-color); text-align: right;">
+        CHANDRA PRAKASH C
+      </div>
+    </div>
+
+    <iframe 
+      src="https://drive.google.com/file/d/1eGIz4Q7H84NDlG7G_QVAIfR4Gr4ebTTq/preview" 
+      width="100%" 
+      height="300px" 
+      style="border: none; border-radius: 10px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+    </iframe>
+
+    <div style="margin-top: 20px;">
+      <a href="https://drive.google.com/file/d/1eGIz4Q7H84NDlG7G_QVAIfR4Gr4ebTTq/view" target="_blank" class="button-effect" style="margin-right: 15px;">👁️ View in New Tab</a>
+      <a href="https://drive.google.com/uc?export=download&id=1eGIz4Q7H84NDlG7G_QVAIfR4Gr4ebTTq" class="button-effect" download>📄 Download Resume</a>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
     <h2>Contact</h2>
     <div class="contact-container">
@@ -262,13 +297,9 @@
         </div>
     </div>
 </section>
-    </section>
-
-<footer>
-    <p>&copy; 2025 Chandra Prakash C. All rights reserved.</p>
-</footer>
-
-<script>
+<!-- Scripts -->
+ <script>
+  // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -277,8 +308,36 @@
       });
     });
   });
+
+  // Theme toggle using checkbox
+  const themeToggleCheckbox = document.getElementById('checkbox');
+  const emoji = document.getElementById('emoji-toggle');
+
+  function updateEmoji() {
+    emoji.textContent = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
+  }
+
+  // Load saved theme preference from localStorage
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-theme');
+    themeToggleCheckbox.checked = true;
+  }
+  updateEmoji();
+
+  // Listen for toggle changes
+  themeToggleCheckbox.addEventListener('change', () => {
+    document.body.classList.toggle('light-theme');
+    localStorage.setItem(
+      'theme',
+      document.body.classList.contains('light-theme') ? 'light' : 'dark'
+    );
+    updateEmoji();
+  });
 </script>
 
+<footer>
+    <p>&copy; 2025 Chandra Prakash C. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
