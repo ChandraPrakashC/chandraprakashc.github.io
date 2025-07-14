@@ -5,9 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Portfolio</title>
   <link rel="stylesheet" href="styles.css" id="theme-style">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
 </head>
 <body>
-
+    <div id="particles-js"></div>
 <header>
     <label class="theme-switch">
   <input type="checkbox" id="checkbox" />
@@ -72,7 +77,7 @@
     </section>
 
     <section id="projects">
-        <h2>Projects</h2>
+        <h2 class="animated-Project-title">Projects</h2>
 
         <div class="project">
             <div class="project-description">
@@ -127,7 +132,7 @@
                 <p>
                     Developed an image-to-cartoon converter in Python utilizing OpenCV for image processing and Generative Adversarial Networks (GANs) for style transformation. Implemented a pre-trained GAN model to transform real images into cartoon-style images. Employed OpenCV for preprocessing tasks such as resizing, noise reduction, and edge detection. Integrated GAN to perform style transfer, creating cartoon-like effects. Created a user-friendly interface for uploading and converting images. Conducted extensive testing to ensure high-quality output. This project enhanced my skills in computer vision, deep learning, and Python programming.</h4>
                 </p>
-                <a href="hhttps://github.com/ChandraPrakashC/Cartoon-Gan-Master" target="_blank" class="github-link" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#24292e;color:#fff;border-radius:4px;text-decoration:none;">
+                <a href="https://github.com/ChandraPrakashC/Cartoon-Gan-Master" target="_blank" class="github-link" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#24292e;color:#fff;border-radius:4px;text-decoration:none;">
             View on GitHub
                 </a>
                 </div>
@@ -189,6 +194,7 @@
 
     <div class="certification-row">
         <div class="certification">
+            
             <img src="Conference.png" alt="Conference" onclick="openModal(this)" data-full="Conference.png">
             <h3>Conference</h3>
             <p>Jan - March 2025<br>ICESM 2025</p>
@@ -269,15 +275,15 @@
     </div>
 
     <iframe 
-      src="https://drive.google.com/file/d/1eGIz4Q7H84NDlG7G_QVAIfR4Gr4ebTTq/view?usp=sharing/preview" 
+      src="https://drive.google.com/file/d/1eGIz4Q7H84NDlG7G_QVAIfR4Gr4ebTTq/preview" 
       width="100%" 
       height="300px" 
       style="border: none; border-radius: 10px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
     </iframe>
 
     <div style="margin-top: 20px;">
-      <a href="https://drive.google.com/file/d/1eGIz4Q7H84NDlG7G_QVAIfR4Gr4ebTTq/view?usp=sharing/view" target="_blank" class="button-effect" style="margin-right: 15px;">👁️ View in New Tab</a>
-      <a href="https://drive.google.com/file/d/1eGIz4Q7H84NDlG7G_QVAIfR4Gr4ebTTq/view?usp=sharing" class="button-effect" download>📄 Download Resume</a>
+      <a href="https://drive.google.com/file/d/1eGIz4Q7H84NDlG7G_QVAIfR4Gr4ebTTq/view" target="_blank" class="button-effect" style="margin-right: 15px;">👁️ View in New Tab</a>
+      <a href="https://drive.google.com/uc?export=download&id=1eGIz4Q7H84NDlG7G_QVAIfR4Gr4ebTTq" class="button-effect" download>📄 Download Resume</a>
     </div>
   </div>
 </section>
@@ -296,9 +302,74 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1912.9683145630788!2d78.09862823834953!3d9.540530648587529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMzInMjYuMSJOIDc4wrAwNSc1Ni44IkU!5e0!3m2!1sen!2sin!4v1751443186467!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
+<div class="circle-social-icons">
+  <a href="https://github.com/ChandraPrakashC" target="_blank" aria-label="GitHub" style="--i: 1">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/chandraprakashc51/" target="_blank" aria-label="LinkedIn" style="--i: 2">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="mailto:cchandraprakashmech@gmail.com" aria-label="Email" style="--i: 3">
+    <i class="fas fa-envelope"></i>
+  </a>
+</div>
 </section>
 <!-- Scripts -->
- <script>
+<!-- Particle Background -->
+<div id="particles-js"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+</style>
+
+<script>
+  function loadParticles(theme) {
+    const color = theme === 'light' ? '#000000' : '#ffffff';
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80 },
+        color: { value: color },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: color,
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 3
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        }
+      },
+      retina_detect: true
+    });
+  }
+
+  function reloadParticles(theme) {
+    const container = document.getElementById('particles-js');
+    container.innerHTML = ''; // clear old canvas
+    loadParticles(theme);
+  }
+
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -309,7 +380,7 @@
     });
   });
 
-  // Theme toggle using checkbox
+  // Theme toggle
   const themeToggleCheckbox = document.getElementById('checkbox');
   const emoji = document.getElementById('emoji-toggle');
 
@@ -317,24 +388,24 @@
     emoji.textContent = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
   }
 
-  // Load saved theme preference from localStorage
-  if (localStorage.getItem('theme') === 'light') {
+  // Load theme from localStorage
+  let theme = localStorage.getItem('theme') || 'dark';
+  if (theme === 'light') {
     document.body.classList.add('light-theme');
     themeToggleCheckbox.checked = true;
   }
-  updateEmoji();
 
-  // Listen for toggle changes
+  updateEmoji();
+  loadParticles(theme);
+
   themeToggleCheckbox.addEventListener('change', () => {
     document.body.classList.toggle('light-theme');
-    localStorage.setItem(
-      'theme',
-      document.body.classList.contains('light-theme') ? 'light' : 'dark'
-    );
+    const newTheme = document.body.classList.contains('light-theme') ? 'light' : 'dark';
+    localStorage.setItem('theme', newTheme);
     updateEmoji();
+    reloadParticles(newTheme);
   });
 </script>
-
 <footer>
     <p>&copy; 2025 Chandra Prakash C. All rights reserved.</p>
 </footer>
